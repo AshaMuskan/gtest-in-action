@@ -59,3 +59,13 @@ int actualValue=Add(input);
 //Assert
 ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(StringCalculatorTestSuite,add_multicharacterInputString_SumIsExpected){
+//Arrange
+string input="//[***]\n2***1***2";
+int expectedValue=5;
+//Act
+int actualValue=Add(input);
+//Assert
+ASSERT_EQ(actualValue,expectedValue);
+}
