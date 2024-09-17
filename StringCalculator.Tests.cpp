@@ -66,7 +66,7 @@ ASSERT_THROW(Add(input),invalid_argument);
 }
 
 TEST(StringCalculatorTestSuite,add_when_passed_numbers_over_1000_SumIsExpected){
-string input="22,1201,6:;
+string input="22,1201,6";
 int expectedValue=28;
 int actualValue=Add(input);
 ASSERT_EQ(actualValue,expectedValue);
