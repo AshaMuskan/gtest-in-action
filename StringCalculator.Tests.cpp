@@ -64,3 +64,10 @@ string input="1,-2,-2,5";
 int expectedValue=0;
 ASSERT_THROW(Add(input),invalid_argument);
 }
+
+TEST(StringCalculatorTestSuite,add_when_passed_numbers_over_1000_SumIsExpected){
+string input="22,1201,6:;
+int expectedValue=1229;
+int actualValue=Add(input);
+ASSERT_EQ(actualValue,expectedValue);
+}
