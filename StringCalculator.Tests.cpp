@@ -61,21 +61,21 @@ ASSERT_EQ(actualValue,expectedValue);
 }
 
 TEST(StringCalculatorTestSuite,add_multicharacterInputString_SumIsExpected){
-//Arrange
 string input="//[***]\n2***1***2";
 int expectedValue=5;
-//Act
 int actualValue=Add(input);
-//Assert
 ASSERT_EQ(actualValue,expectedValue);
 }
 
 TEST(StringCalculatorTestSuite,add_multiInputString_SumIsExpected){
-//Arrange
 string input="//[**][%^]\n3**3%^3";
 int expectedValue=9;
-//Act
 int actualValue=Add(input);
-//Assert
 ASSERT_EQ(actualValue,expectedValue);
+}
+
+TEST(StringCalculatorTestSuite,when_passed_negative_numbers_throws_an_exception_invalid_argument){
+string input="1,-2,-2,5";
+int expectedValue=0;
+ASSERT_THROW(Add(input),invalid_argument);
 }
