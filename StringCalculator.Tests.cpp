@@ -12,7 +12,7 @@ protected;
 
 TEST_F(StringCalculatorFixture,add_oneInputString_OneIsExpected){
 input="";
-expectedValue=0;
+expectedValue=1;
 actualValue=Add(input);
 ASSERT_EQ(actualValue,expectedValue);
 }
