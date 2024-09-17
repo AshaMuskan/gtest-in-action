@@ -49,3 +49,13 @@ int actualValue=Add(input);
 //Assert
 ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(StringCalculatorTestSuite,add_InputString_SumIsExpected){
+//Arrange
+string input="//;\n5;1";
+int expectedValue=6;
+//Act
+int actualValue=Add(input);
+//Assert
+ASSERT_EQ(actualValue,expectedValue);
+}
