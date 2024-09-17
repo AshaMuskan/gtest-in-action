@@ -1,34 +1,32 @@
 #include "StringCalculator.h"
-#include<gtest/gtest.h>
-#include <vector>
-
-class TestDataPair{
-
+#include <gtest/gtest.h>
+ 
+class TestPair{
 public:
-  string input;
-  int expectedValue;
-  TestDataPair(string_input,int _expectedValue) : input{_input},expectedValue{_expectedValue}{
+string input;
+int expectedValue;
+TestPair(string _input,int _expectedValue) : input{_input}, expectedValue{_expectedValue}{
 }
 };
- 
+
 TEST(StringCalculatorDataDrivenTestSuite,DataDrivenTestCase){
-vector<TestDataPair> datalist;
-TestDataPair pair_one {"",0};
-TestDataPair pair_two {"0",0};
-TestDataPair pair_three {"1",1};
-TestDataPair pair_four {"1,2",3};
-TestDataPair pair_five {"1,2,3",6};
-
-dataList.push_back(pair_one);
-dataList.push_back(pair_two);
-dataList.push_back(pair_three);
-dataList.push_back(pair_four);
-dataList.push_back(pair_five);
-
-//iterate using a range-based for -loop
-  for(TestDataPair datapair : datalist) {
-  int actualValue=Add(datapair.input);
-  ASSERT_EQ(actualValue,datapair.expectedValue);
-  }
-
+vector<TestPair> datalist;
+TestPair pair_one {"",0};
+TestPair pair_two {"0",0};
+TestPair pair_three {"1",1};
+TestPair pair_four {"1,2",3};
+TestPair pair_five {"1,2,3",6};
+ 
+datalist.push_back(pair_one);
+datalist.push_back(pair_two);
+datalist.push_back(pair_three);
+datalist.push_back(pair_four);
+datalist.push_back(pair_five);
+ 
+//Iterate using a range-baised for-loop
+  for (TestPair dataPair : datalist){
+  int actualValue=Add(dataPair.input);
+  ASSERT_EQ(actualValue,dataPair.expectedValue);
+}
+ 
 }
