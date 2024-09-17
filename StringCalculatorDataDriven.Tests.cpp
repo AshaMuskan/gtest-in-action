@@ -24,10 +24,11 @@ dataList.pushback(pair_two);
 dataList.pushback(pair_three);
 dataList.pushback(pair_four);
 dataList.pushback(pair_five);
+}
 
 //iterate using a range-based for -loop
   for(TestDataPair datapair : datalist) {
   int actualValue=Add(datapair.input);
-  ASSERT_EQ(actualValue,datapair.expectedValue)
+  ASSERT_EQ(actualValue,datapair.expectedValue);
   }
  
