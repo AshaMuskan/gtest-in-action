@@ -40,9 +40,9 @@ int actualValue=Add(input);
 ASSERT_EQ(actualValue,expectedValue);
 }
 
-TEST(StringCalculatorTestSuite,add_multipleInputString_SumIsExpected){
+TEST(StringCalculatorTestSuite,add_newlineInputString_SumIsExpected){
 //Arrange
-string input="5/n1,2";
+string input="5\n1,2";
 int expectedValue=8;
 //Act
 int actualValue=Add(input);
