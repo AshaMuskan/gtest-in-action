@@ -69,3 +69,13 @@ int actualValue=Add(input);
 //Assert
 ASSERT_EQ(actualValue,expectedValue);
 }
+
+TEST(StringCalculatorTestSuite,add_multiInputString_SumIsExpected){
+//Arrange
+string input="//[**][%^]\n3**3%^3";
+int expectedValue=9;
+//Act
+int actualValue=Add(input);
+//Assert
+ASSERT_EQ(actualValue,expectedValue);
+}
