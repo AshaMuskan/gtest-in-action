@@ -6,7 +6,7 @@
 class StringCalculatorFixture:public testing::Test{
 protected:
   string input;
-  int exception;
+  int expectedValue;
   int actualValue;
 };
 
