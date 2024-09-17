@@ -29,4 +29,5 @@ dataList.pushback(pair_five);
   for(TestDataPair datapair : datalist) {
   int actualValue=Add(datapair.input);
   ASSERT_EQ(actualValue,datapair.expectedValue)
+  }
  
