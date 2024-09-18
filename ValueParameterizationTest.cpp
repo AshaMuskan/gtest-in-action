@@ -28,8 +28,8 @@ TEST_P(StringCalculatorParameterFixture,ParameterizedTest){
       input= std::get<0>(GetParam());
       expectedValue= std::get<1>(GetParam());
     Add(input,&fakeDisplayFunction);
-      //actualValue=Add(input);
-      //ASSERT_EQ(actualValue,expectedValue);
+     // actualValue=Add(input);
+     // ASSERT_EQ(actualValue,expectedValue);
 }
 
 
